@@ -4,5 +4,12 @@
   "version": "1.0.0",
   "description": "Search DigitalNZ",
   "contentType": "books",
-  "scriptUrl": "https://raw.githubusercontent.com/widsrucks1/digitalnzcinder/refs/heads/main/digitalnz.js"
+  "contentTypes": [
+    "ebook"
+  ],
+  "capabilities": {
+    "search": true
+  },
+  "minCinderVersion": "2.0.0",
+  "scriptUrl": "https://raw.githubusercontent.com/widsrucks1/digitalnzcinder/main/digitalnz.js"
 }
