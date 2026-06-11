@@ -1,8 +1,0 @@
-{
-  "id": "digitalnz",
-  "name": "DigitalNZ",
-  "version": "1.0.0",
-  "description": "Search DigitalNZ",
-  "contentType": "books",
-  "scriptUrl": "https://raw.githubusercontent.com/widsrucks1/digitalnzcinder/refs/heads/main/digitalnz.js"
-}
