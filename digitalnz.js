@@ -8,8 +8,7 @@ export default {
 
   baseUrl: "https://api.digitalnz.org/v3",
 
-  // REQUIRED: search function (same pattern as your other extensions)
-  search: async (query, page = 1) => {
+  search: async function (query, page = 1) {
     const url =
       `${this.baseUrl}/records.json` +
       `?text=${encodeURIComponent(query)}` +
@@ -39,11 +38,10 @@ export default {
     };
   },
 
-  // OPTIONAL but SAFE (prevents undefined errors in some loaders)
-  getDetails: async (id) => {
+  getDetails: async function (id) {
     try {
       const res = await fetch(
-        `https://api.digitalnz.org/v3/records/${id}.json`
+        `${this.baseUrl}/records/${id}.json`
       );
       const json = await res.json();
 
