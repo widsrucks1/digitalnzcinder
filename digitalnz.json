@@ -1,24 +1,21 @@
 {
   "id": "digitalnz-metadata",
   "name": "DigitalNZ",
-  "version": "1.0.0",
-  "description": "Search DigitalNZ records for books and archival metadata.",
+  "version": "1.0.1",
+  "description": "DigitalNZ metadata provider",
   "capabilities": {
     "search": true
   },
-  "baseUrl": "https://api.digitalnz.org/v3",
   "search": {
-    "endpoint": "/records.json",
+    "url": "https://api.digitalnz.org/v3/records.json",
     "method": "GET",
-    "query": {
+    "params": {
       "text": "{{query}}",
       "page": "{{page}}",
       "per_page": "{{limit}}"
     },
-    "response": {
-      "resultsPath": "results"
-    },
-    "mapping": {
+    "responsePath": "results",
+    "map": {
       "id": "id",
       "title": "title",
       "author": "creator",
@@ -26,7 +23,6 @@
       "cover": "thumbnail_url",
       "publisher": "content_partner",
       "date": "date",
-      "category": "category",
       "url": "source_url"
     }
   }
